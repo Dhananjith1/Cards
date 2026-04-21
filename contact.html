@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact eColink Smart Card</title>
+  <meta name="description" content="Get your eColink Smart Card today. Submit an inquiry for Basic, Standard, or Premium package options.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="contact">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <img class="brand-mark" src="images/Logo.jpeg" alt="eColink logo">
+        <span class="brand-text"><strong>eColink</strong> Smart Card</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="index.html" data-page-link="home">Home</a>
+        <a href="about.html" data-page-link="about">About eColink</a>
+        <a href="packages.html" data-page-link="packages">Packages</a>
+        <a href="features.html" data-page-link="features">Features</a>
+        <a href="contact.html" data-page-link="contact">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="section-title reveal">Get Your eColink Smart Card Today</h1>
+        <p class="section-subtitle reveal">
+          Fill out the inquiry form and our team will help you choose the ideal package for your personal or
+          business networking goals.
+        </p>
+
+        <div class="form-layout">
+          <article class="panel reveal">
+            <h3>Contact Information</h3>
+            <p>
+              We are ready to support your transition to modern, sustainable, and professional networking.
+            </p>
+            <ul class="contact-list">
+              <li>Modern NFC-powered business identity</li>
+              <li>Eco-conscious and long-lasting card options</li>
+              <li>Custom branding and social profile integration</li>
+            </ul>
+            <p class="contact-button-note">Button: Submit Inquiry</p>
+          </article>
+
+          <article class="panel reveal">
+            <h3>Submit Inquiry</h3>
+            <form class="inquiry-form" action="#" method="post">
+              <div class="form-row">
+                <label for="full-name">Full Name</label>
+                <input id="full-name" name="fullName" type="text" autocomplete="name" required>
+              </div>
+
+              <div class="form-row">
+                <label for="company-name">Company Name</label>
+                <input id="company-name" name="companyName" type="text" autocomplete="organization">
+              </div>
+
+              <div class="form-row">
+                <label for="phone-number">Phone Number</label>
+                <input id="phone-number" name="phoneNumber" type="tel" autocomplete="tel" required>
+              </div>
+
+              <div class="form-row">
+                <label for="email-address">Email Address</label>
+                <input id="email-address" name="emailAddress" type="email" autocomplete="email" required>
+              </div>
+
+              <div class="form-row">
+                <label for="select-package">Select Package</label>
+                <select id="select-package" name="package" required>
+                  <option value="" selected disabled>Select a package</option>
+                  <option value="basic">Basic Package - 2,300</option>
+                  <option value="standard">Standard Package - 2,500</option>
+                  <option value="premium">Premium Package - 5,000</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell us about your requirement..."></textarea>
+              </div>
+
+              <button class="btn btn-primary" type="submit">Submit Inquiry</button>
+              <p class="form-message" aria-live="polite"></p>
+            </form>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Copyright <span data-year></span> eColink Smart Card. All rights reserved.</p>
+      <nav class="footer-nav" aria-label="Footer links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="packages.html">Packages</a>
+        <a href="features.html">Features</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
