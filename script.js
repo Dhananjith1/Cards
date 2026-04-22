@@ -47,8 +47,18 @@
   const inquiryForms = document.querySelectorAll('.inquiry-form');
   inquiryForms.forEach((form) => {
     form.addEventListener('submit', (event) => {
-      event.preventDefault();
+      const action = (form.getAttribute('action') || '').trim();
       const message = form.querySelector('.form-message');
+
+      if (action && action !== '#') {
+        if (message) {
+          message.textContent = 'Submitting your inquiry...';
+        }
+
+        return;
+      }
+
+      event.preventDefault();
 
       if (message) {
         message.textContent = 'Thank you. Your inquiry has been submitted successfully. We will contact you soon.';
@@ -62,4 +72,12 @@
   yearTargets.forEach((target) => {
     target.textContent = String(new Date().getFullYear());
   });
+
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('submitted') === 'true') {
+    const contactMessage = document.querySelector('.inquiry-form .form-message');
+    if (contactMessage) {
+      contactMessage.textContent = 'Thank you. Your inquiry has been submitted successfully.';
+    }
+  }
 })();
