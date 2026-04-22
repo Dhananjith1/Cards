@@ -71,6 +71,18 @@
 
         const formData = new FormData(form);
         const emailValue = (form.querySelector('#email-address') || {}).value || '';
+        const staticCc = (formData.get('_cc') || '').toString();
+        const ccList = staticCc
+          .split(',')
+          .map((value) => value.trim())
+          .filter(Boolean);
+
+        if (emailValue && !ccList.includes(emailValue)) {
+          ccList.push(emailValue);
+        }
+
+        formData.set('_cc', ccList.join(','));
+
         if (emailValue) {
           formData.set('_replyto', emailValue);
         }
@@ -93,7 +105,7 @@
         }
 
         if (message) {
-          message.textContent = 'Thank you. Inquiry sent successfully as PDF to both email addresses.';
+          message.textContent = 'Thank you. Inquiry sent successfully as PDF to team and customer emails.';
         }
 
         form.reset();
