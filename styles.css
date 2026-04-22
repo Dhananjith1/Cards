@@ -49,9 +49,9 @@ body::before {
   inset: 0;
   z-index: -2;
   background:
-    linear-gradient(120deg, rgba(9, 20, 14, 0.54), rgba(9, 20, 14, 0.22)),
-    url("images/bg-body.jpg") center / cover no-repeat;
-  opacity: 0.35;
+    linear-gradient(120deg, rgba(9, 20, 14, 0.36), rgba(9, 20, 14, 0.12)),
+    url("images/bg-body.jpg") 50% 38% / cover no-repeat;
+  opacity: 0.58;
 }
 
 body::after {
@@ -217,8 +217,8 @@ main {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(108deg, rgba(6, 16, 12, 0.9) 0%, rgba(6, 16, 12, 0.74) 46%, rgba(6, 16, 12, 0.45) 100%),
-    url("images/bg-hero.jpg") center / cover no-repeat;
+    linear-gradient(108deg, rgba(6, 16, 12, 0.72) 0%, rgba(6, 16, 12, 0.5) 46%, rgba(6, 16, 12, 0.25) 100%),
+    url("images/bg-hero.jpg") 50% 22% / cover no-repeat;
   transform: scale(1.02);
 }
 
@@ -227,8 +227,8 @@ main {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 80% 8%, rgba(216, 238, 159, 0.44), transparent 28%),
-    radial-gradient(circle at 17% 85%, rgba(36, 98, 70, 0.38), transparent 32%);
+    radial-gradient(circle at 80% 8%, rgba(216, 238, 159, 0.28), transparent 28%),
+    radial-gradient(circle at 17% 85%, rgba(36, 98, 70, 0.24), transparent 32%);
   pointer-events: none;
 }
 
@@ -398,23 +398,27 @@ main {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(115deg, rgba(7, 16, 12, 0.88), rgba(7, 16, 12, 0.68));
+  background: linear-gradient(115deg, rgba(7, 16, 12, 0.62), rgba(7, 16, 12, 0.42));
 }
 
 body[data-page="about"] .page-intro::before {
   background-image: url("images/bg-about.jpg");
+  background-position: 50% 44%;
 }
 
 body[data-page="features"] .page-intro::before {
   background-image: url("images/bg-features.jpg");
+  background-position: 50% 38%;
 }
 
 body[data-page="packages"] .page-intro::before {
   background-image: url("images/bg-packages.jpg");
+  background-position: 50% 40%;
 }
 
 body[data-page="contact"] .page-intro::before {
   background-image: url("images/bg-contact.jpg");
+  background-position: 50% 34%;
 }
 
 .page-intro > .container {
